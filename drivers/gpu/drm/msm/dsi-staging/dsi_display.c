@@ -693,9 +693,7 @@ int dsi_display_check_status(void *display, bool te_check_override)
 		rc = dsi_display_status_check_te(dsi_display, te_rechecks);
 	/* Unmask error interrupts if check passed*/
 	if (rc > 0) {
-		dsi_display_set_ctrl_esd_check_flag(dsi_display, false);
-		dsi_display_mask_ctrl_error_interrupts(dsi_display, mask,
-							false);
+		dsi_display_mask_ctrl_error_interrupts(dsi_display);
 		if (te_check_override && panel->esd_config.esd_enabled == false)
 			rc = dsi_display_status_check_te(dsi_display,
 					te_rechecks);
