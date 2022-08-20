@@ -99,7 +99,8 @@
 					05 01 00 00 00 00 01 29
 				];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
-				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
+				qcom,compression-mode = "dsc";
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 			};
 		};
